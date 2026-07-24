@@ -23,4 +23,3 @@ npm run build
 
 Produces `dist/`, synced to S3 + CloudFront-invalidated by the CI pipeline
 added in Stage 9.
-# three-tier-frontend
