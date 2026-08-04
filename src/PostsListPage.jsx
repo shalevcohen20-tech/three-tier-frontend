@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { listPosts } from './api'
+import { API_URL, listPosts } from './api'
 
 export default function PostsListPage() {
   const [posts, setPosts] = useState([])
@@ -24,7 +24,7 @@ export default function PostsListPage() {
     return (
       <p className="status status-error">
         Couldn't reach the backend ({error}). Is it running at{' '}
-        <code>{import.meta.env.VITE_API_URL || 'http://localhost:8000'}</code>?
+        <code>{API_URL || window.location.origin}</code>
       </p>
     )
   }
